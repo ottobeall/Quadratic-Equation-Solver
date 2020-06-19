@@ -1,0 +1,25 @@
+public class Equation {
+    double x;
+    double a;
+    double b;
+    double c;
+    char name;
+    public Equation(char name, int a, int b, int c)
+    {
+        this.name=name;
+        this.a=a;
+        this.b=b;
+        this.c=c;
+      System.out.println(a+", "+b+", "+c);
+    }
+    public void calculate(int x)
+    {
+        double result = a*x*x+b*x+c;
+        System.out.println(name+"("+x+")="+result);
+    }
+    public static void main (String [] args)
+    {
+        Equation f = new Equation('f',1,3,2);
+        f.calculate(4);
+    }
+}
